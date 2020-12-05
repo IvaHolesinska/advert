@@ -1,0 +1,11 @@
+.article-list {display: flex;}
+
+
+
+
+.img {
+    width: 180px;
+    height: 100px;
+    background-color: gray;
+    border: 1px solid orange;
+}
