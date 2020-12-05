@@ -1,11 +1,68 @@
-.article-list {display: flex;}
-
-
-
-
-.img {
-    width: 180px;
-    height: 100px;
-    background-color: gray;
-    border: 1px solid orange;
+.article {
+    display: flex; 
 }
+
+
+.img,
+.img-reklama {
+    width: 200px;
+    height: 120px;
+    background-color: rgb(206, 199, 199);
+    border: 1px solid orange;
+    margin: 8px;
+}
+
+.img-reklama {
+    background-color: orange;
+    border: 1px solid rgb(194, 192, 188);
+}
+
+h1 {
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+
+.article-list {
+    width: 680px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 4px gray;
+}
+
+
+.article-list-bottom {display: flex;
+    width: 90%;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 7px gray;}
+
+
+.bottom-wrap {
+    padding-top: 10px;
+}
+
+/* .side-wrap{
+    position: sticky;
+    top: 10px;
+} */
+
+/* .reklama {
+    width: 500px;
+} */
+
+
+.obal {
+    width: 680px;
+}
+ .img-after {
+    display: flex;
+    
+}
+
+.sipka::after {
+    display: table-cell;
+    vertical-align: middle;
+	content:" > ";
+    color: orange;
+    font-size: 80px;
+    padding: 20px;
+}
+
