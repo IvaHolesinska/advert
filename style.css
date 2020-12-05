@@ -1,11 +1,29 @@
-.article-list {display: flex;}
-
-
+.article {
+    display: flex; 
+}
 
 
 .img {
-    width: 180px;
-    height: 100px;
-    background-color: gray;
+    width: 200px;
+    height: 130px;
+    background-color: rgb(206, 199, 199);
     border: 1px solid orange;
+    margin: 6px;
+}
+
+.article-list {
+    width: 70%;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 4px gray;
+}
+
+
+.article-list-bottom {display: flex;
+    width: 90%;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 7px gray;}
+
+
+.bottom-wrap {
+    padding-top: 15px;
 }
