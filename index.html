@@ -110,10 +110,64 @@
 
   	<!-- POD TÍMTO KOMENTÁŘEM JE PROSTOR PRO VÁŠ KÓD: -->
 
-<script src="script.js"></script>
+<script>
+	var articleListObject = document.getElementsByClassName("article");
+	// articleListObject = Array.prototype.slice.call(articleListObject);
+	var articleList = [];
 
-	<div class="obal">  
-		<div class="img-after">   
+	for(var article in articleListObject) {
+		console.log(article);
+		articleList.push(article.outerHtml);
+	}
+	
+	// var articleList = Array.prototype.slice.call(articleListObject);
+
+	var index = 2;
+	var spliceIterations = Math.floor((articleList.length - 1) / index);
+
+	console.log(articleList.length);
+	console.log(articleList);
+
+	var advertBlock = '<div id="prvni">' + 
+		'<div class="img-after">   '+
+			'<div class="img-wrap"> '+
+				'<div class="img-reklama"></div>' +
+				'</div> ' +
+				'<div class="text-wrap-after"> ' +
+					'<h1>Reklamní jednotka</h1> ' + 
+					'<p class="reklama">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam bibendum elit eget erat. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Maecenas lorem.</p>' + 
+					'</div>	' +
+					'<p class="sipka"></p>  ' +
+					'</div>'  +
+					'</div> ' +
+					'</div> ';
+
+	document.getElementsByClassName("article")[2].innerHTML = advertBlock;
+	for(var i = 0; i < spliceIterations; i++) {
+		articleList.splice((i+1)*index + i,0,advertBlock);
+	}
+
+	console.log(articleList);
+
+	// document.write(articleList);
+
+	var advertSideBlock = '<div id="side-wrapp">' + 
+			'<div class="img-wrap"> '+
+				'<div class="img-reklama"></div>' +
+				'</div> ' +
+				'<div class="text-wrap-after"> ' +
+					'<h1>Reklamní jednotka</h1> ' + 
+					'<p class="reklama">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam bibendum elit eget erat. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Maecenas lorem.</p>' + 
+					'</div>'  +
+					'</div> ' +
+					'</div> ';
+
+	document.getElementsByClassName("side-wrap")[0].innerHTML = advertSideBlock;
+
+</script>
+
+<!-- <div id="prvni">  
+	<div class="img-after">   
 			<div class="img-wrap">
 				<div class="img-reklama"></div>
 			</div>
@@ -121,35 +175,37 @@
 				<h1>Reklamní jednotka</h1>
 				<p class="reklama">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam bibendum elit eget erat. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Maecenas lorem.</p>
 			</div>	
-			<p class="sipka"> 
-
-			</p>  
-		</div>
-
-		<div class="img-after">   
-			<div class="img-wrap">
-				<div class="img-reklama"></div>
-			</div>
-			<div class="text-wrap-after">
-				<h1>Reklamní jednotka</h1>
-				<p class="reklama">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam bibendum elit eget erat. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Maecenas lorem.</p>
-			</div>	
-			<p class="sipka"> 
-
-			</p>  
+			<p class="sipka"></p>  
 		</div>
 	</div>
-
-
-	<div class="img-wrap">
-		<div class="img-reklama"></div>
-	</div>
-	<div class="text-wrap">
-		<h1>Reklamní jednotka</h1>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam bibendum elit eget erat. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Maecenas lorem.</p>
-	</div>
-
 </div>
+
+
+		<div class="img-after">   
+			<div class="img-wrap">
+				<div class="img-reklama"></div>
+			</div>
+			<div class="text-wrap-after">
+				<h1>Reklamní jednotka</h1>
+				<p class="reklama">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam bibendum elit eget erat. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Maecenas lorem.</p>
+			</div>	
+			<p class="sipka"> 
+
+			</p>  
+		</div>
+	
+
+
+	<div id="side-wrapp">  
+		<div class="img-wrap">
+			<div class="img-reklama"></div>
+		</div>
+		<div class="text-wrap">
+			<h1>Reklamní jednotka</h1>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam bibendum elit eget erat. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Maecenas lorem.</p>
+		</div>
+	</div>
+</div> -->
 
 
 
