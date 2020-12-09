@@ -69,3 +69,6 @@ h1 {
     display: inline-block;
 }
 
+.img .img-wrap {
+    margin-left: 0;
+}
