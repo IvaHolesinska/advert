@@ -1,36 +1,51 @@
-.article {
-    display: flex; 
-}
-
-
-.img,
-.img-reklama {
-    width: 200px;
-    height: 120px;
-    background-color: rgb(206, 199, 199);
-    border: 1px solid orange;
-    margin: 8px;
-}
-
-.img-reklama {
-    background-color: orange;
-    border: 1px solid rgb(194, 192, 188);
+body{
+    font-size: 1.5em;
 }
 
 h1 {
+    color: rgb(211, 145, 24);
     margin-top: 3px;
     margin-bottom: 0px;
 }
 
+.article {
+    display: flex; 
+}
+
+/* style obdelníky */
+.img,
+.img-reklama,
+.img-reklama-ctverec {
+    width: 280px;
+    height: 180px;
+    background-color: rgb(206, 199, 199);
+    border: 1px solid rgb(211, 145, 24);
+    margin: 8px;
+}
+
+.img-reklama,
+.img-reklama-ctverec {
+    background-color:  rgb(211, 145, 24);
+    border: 1px solid rgb(194, 192, 188);
+}
+
+.img-reklama-ctverec {
+    width: auto;
+    height: 370px;
+}
+
+/* hlavní sloupec */
+
 .article-list {
-    width: 680px;
+    width: 100%;
     border: 1px solid gray;
     box-shadow: 2px 2px 4px gray;
 }
-
-
+.article-list .img-after {
+    width: 100%;
+}
 .article-list-bottom {display: flex;
-    width: 90%;
+    width: 100%;
     border: 1px solid gray;
     box-shadow: 2px 2px 7px gray;}
 
@@ -39,36 +54,72 @@ h1 {
     padding-top: 10px;
 }
 
-.side-wrap{
-    position: sticky;
-    top: 10px;
-    float: right;
-    max-width:20%;
-}
-
-
-
- .img-after {
+.img-after {
     display: flex;
     width: 680px;
     
 }
-
-.sipka::after {
-    display: table-cell;
-    vertical-align: middle;
-	content:" > ";
-    color: orange;
-    font-size: 80px;
-    padding: 20px;
-}
-
 .content-wrap {
     max-width: 70% !important;
     margin:none;
     display: inline-block;
 }
 
-.img .img-wrap {
-    margin-left: 0;
+
+/* postranní čtverec */
+
+.side-wrap{
+    position: sticky;
+    top: 0;
+    left: 0;
+    float: right;
+    max-width:450px;
+    height: 680px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 7px gray;
+    padding-top: 40px;
+
 }
+
+
+/* pseudoprvek šipka */
+.sipka::after {
+    display: table-cell;
+    vertical-align: middle;
+	content:" > ";
+    color: rgb(211, 145, 24);
+    font-size: 80px;
+    padding: 45px 20px 20px 20px;
+}
+
+
+
+/* /* šířka objektů     */
+.bottom-wrap .img, 
+.bottom-wrap .img-reklama,
+.side-wrap .img-reklama {
+    width: auto;
+}
+
+.bottom-wrap .text-wrap,
+.bottom-wrap .text-wrap-after,
+.side-wrap .text-wrap-after{  
+    padding: 0px 6px;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .content-wrap {
+        max-width: 70% !important;
+        margin:none;
+        display: inline !important;
+    }  
+
+    .side-wrap{
+        top: 10px;
+        float: left !important;
+        max-width: 20%;
+    }
+  }
