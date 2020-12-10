@@ -60,7 +60,7 @@ h1 {
     
 }
 .content-wrap {
-    max-width: 70% !important;
+    max-width: 70% ;
     margin:none;
     display: inline-block;
 }
@@ -72,8 +72,8 @@ h1 {
     position: sticky;
     top: 0;
     float: right;
-    max-width:450px;
-    height: 580px;
+    max-width:400px;
+    height: 600px;
     border: 1px solid gray;
     box-shadow: 2px 2px 7px gray;
     padding-top: 40px;
