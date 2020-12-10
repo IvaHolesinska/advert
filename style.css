@@ -1,5 +1,5 @@
 body{
-    font-size: 1.5em;
+    font-size: 1.1em;
 }
 
 h1 {
@@ -16,8 +16,8 @@ h1 {
 .img,
 .img-reklama,
 .img-reklama-ctverec {
-    width: 280px;
-    height: 180px;
+    width: 230px;
+    height: 160px;
     background-color: rgb(206, 199, 199);
     border: 1px solid rgb(211, 145, 24);
     margin: 8px;
@@ -37,7 +37,7 @@ h1 {
 /* hlavní sloupec */
 
 .article-list {
-    width: 100%;
+    width: 70%;
     border: 1px solid gray;
     box-shadow: 2px 2px 4px gray;
 }
@@ -71,10 +71,9 @@ h1 {
 .side-wrap{
     position: sticky;
     top: 0;
-    left: 0;
     float: right;
     max-width:450px;
-    height: 680px;
+    height: 580px;
     border: 1px solid gray;
     box-shadow: 2px 2px 7px gray;
     padding-top: 40px;
@@ -109,7 +108,7 @@ h1 {
 
 
 
-
+/* 
 @media only screen and (max-width: 600px) {
     .content-wrap {
         max-width: 70% !important;
@@ -122,4 +121,4 @@ h1 {
         float: left !important;
         max-width: 20%;
     }
-  }
+  } */
