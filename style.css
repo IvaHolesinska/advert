@@ -31,13 +31,13 @@ h1 {
 
 .img-reklama-ctverec {
     width: auto;
-    height: 370px;
+    height: 300px;
 }
 
 /* hlavní sloupec */
 
 .article-list {
-    width: 70%;
+    width: 100%;
     border: 1px solid gray;
     box-shadow: 2px 2px 4px gray;
 }
@@ -72,8 +72,8 @@ h1 {
     position: sticky;
     top: 0;
     float: right;
-    max-width:400px;
-    height: 600px;
+    max-width:350px;
+    height: 550px;
     border: 1px solid gray;
     box-shadow: 2px 2px 7px gray;
     padding-top: 40px;
@@ -105,20 +105,3 @@ h1 {
 .side-wrap .text-wrap-after{  
     padding: 0px 6px;
 }
-
-
-
-/* 
-@media only screen and (max-width: 600px) {
-    .content-wrap {
-        max-width: 70% !important;
-        margin:none;
-        display: inline !important;
-    }  
-
-    .side-wrap{
-        top: 10px;
-        float: left !important;
-        max-width: 20%;
-    }
-  } */
